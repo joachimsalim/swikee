@@ -5,9 +5,10 @@ def boil(url):
 	req = requests.get(url)
 	html = req.text
 	soup = BeautifulSoup(html, 'html.parser')	
-	print(soup.prettify())
+	return soup.prettify()
 
 if __name__ == '__main__':
-	url = 'http://allaboutfrogs.org/funstuff/randomfrog.html'
-	boil(url)
+	frog = 'http://allaboutfrogs.org/funstuff/randomfrog.html'
+	swikee = boil(frog)
+	print(swikee)
 
